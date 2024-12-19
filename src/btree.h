@@ -207,8 +207,8 @@ bool BTREE_FUNC(insert)(BTREE_NAME *tree, BTREE_KEY_TYPE key, void *value) {
     BTREE_NODE *insert_value = (BTREE_NODE *)value;
     BTREE_KEY_TYPE insert_key = key;
     while (!finished) {
-        size_t start = 0;
-        size_t i = 0;
+        uint32_t start = 0;
+        int32_t i = 0;
         if (current_node->height > 0) {
             // insert in non-leaf starts at 1
             start = 1;
@@ -257,7 +257,7 @@ bool BTREE_FUNC(insert)(BTREE_NAME *tree, BTREE_KEY_TYPE key, void *value) {
             bool insert_done = false;
             BTREE_NODE *new_node = BTREE_NODE_MEMORY_POOL_FUNC(get)(tree->pool);
             i = BTREE_NODE_MAX_DEGREE - 1;
-            ssize_t j = (BTREE_NODE_MAX_DEGREE - 1) / 2;
+            int32_t j = (BTREE_NODE_MAX_DEGREE - 1) / 2;
             while (j >= 0) {
                 if (insert_done || BTREE_KEY_LESS_THAN(insert_key, current_node->keys[i])) {
                     new_node->children[j] = current_node->children[i];
