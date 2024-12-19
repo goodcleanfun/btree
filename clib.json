@@ -1,0 +1,17 @@
+{
+    "name": "btree",
+    "version": "0.0.0",
+    "repo": "goodcleanfun/btree",
+    "description": "Generi B+tree with memory pooling",
+    "keywords": [],
+    "license": "MIT",
+    "dependencies": {
+      "goodcleanfun/memory_pool": "*"
+    },
+    "development": {
+      "silentbicycle/greatest": "*"
+    },
+    "src": [
+      "src/btree.h"
+    ]
+  }
