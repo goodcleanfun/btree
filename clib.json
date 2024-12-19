@@ -1,6 +1,6 @@
 {
     "name": "btree",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repo": "goodcleanfun/btree",
     "description": "Generi B+tree with memory pooling",
     "keywords": [],
