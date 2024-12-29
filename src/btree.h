@@ -157,7 +157,7 @@ static inline size_t BTREE_FUNC(binary_search_node)(BTREE_NODE *node, BTREE_KEY_
     return lo;
 }
 
-void *BTREE_FUNC(search)(BTREE_NODE *node, BTREE_KEY_TYPE key) {
+void *BTREE_FUNC(get)(BTREE_NODE *node, BTREE_KEY_TYPE key) {
     if (node == NULL) return NULL;
     BTREE_NODE *current_node = node;
     void *value;
